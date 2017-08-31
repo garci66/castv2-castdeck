@@ -1,23 +1,23 @@
 {
-  "name": "castv2-youtube",
+  "name": "castv2-castdeck",
   "version": "0.0.2",
-  "description": "castv2-client youtube sender",
+  "description": "castv2-client FirstLegoLeague-castDeck sender",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "youtube",
+    "castdeck",
     "chromecast",
     "castv2"
   ],
     "repository": {
     "type": "git",
-    "url": "git@github.com:xat/castv2-youtube.git"
+    "url": "git@github.com:garci66/castv2-castdeck.git"
   },
   "author": "Simon Kusterer",
   "license": "MIT",
   "dependencies": {
-    "castv2-client": "0.0.6"
+    "castv2-client": "1.2.0"
   }
 }
