@@ -73,5 +73,12 @@ CastdeckController.prototype.sessionRequest = function(data, callback) {
   });
 };
 
+CastdeckController.prototype.setUrl = function(url, callback) {  
+  var data = {
+    url: url
+  };
+
+  this.sessionRequest(data, callback);
+};
 
 module.exports = CastdeckController;
