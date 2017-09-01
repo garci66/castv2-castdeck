@@ -1,5 +1,6 @@
 var util                      = require('util');
 var castv2Cli                 = require('castv2-client');
+var debug                     = require('debug')('castv2-castdeck');
 var RequestResponseController = castv2Cli.RequestResponseController;
 
 function CastdeckController(client, sourceId, destinationId) {
