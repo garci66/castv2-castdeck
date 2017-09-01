@@ -33,6 +33,8 @@ function CastdeckController(client, sourceId, destinationId) {
 
 util.inherits(CastdeckController, RequestResponseController);
 
+function noop() {}
+
 CastdeckController.prototype.load = function(url) {
   // TODO: Implement Callback
 
@@ -46,7 +48,7 @@ CastdeckController.prototype.load = function(url) {
       duration: 10
   };
 
-  this.request(data);
+  this.request(data, noop);
 };
 
 CastdeckController.prototype.getStatus = function(callback) {
@@ -56,6 +58,17 @@ CastdeckController.prototype.getStatus = function(callback) {
     if(err) return callback(err);
     var status = response.status[0];
     self.currentSession = status;
+    callback(null, status);
+  });
+};
+
+CastdeckController.prototype.sessionRequest = function(data, callback) {
+  data.mediaSessionId = this.currentSession.mediaSessionId;
+  callback = callback || noop;
+
+  this.request(data, function(err, response) {
+    if(err) return callback(err);
+    var status = response.status[0];
     callback(null, status);
   });
 };
