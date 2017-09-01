@@ -1,2 +1,2 @@
-module.exports.YoutubeController = require('./YoutubeController');
-module.exports.Youtube   = require('./Youtube');
+module.exports.CastdeckController = require('./CastdeckController');
+module.exports.Castdeck   = require('./Castdeck');
