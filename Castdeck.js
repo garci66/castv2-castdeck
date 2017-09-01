@@ -1,16 +1,17 @@
 var util              = require('util');
 var castv2Cli         = require('castv2-client');
 var Application       = castv2Cli.Application;
-var MediaController   = castv2Cli.MediaController;
+//var MediaController   = castv2Cli.MediaController;
 var CastdeckController = require('./CastdeckController');
+
 
 function Castdeck(client, session) {
   Application.apply(this, arguments);
 
-  this.media = this.createController(MediaController);
+  //this.media = this.createController(MediaController);
   this.castdeck = this.createController(CastdeckController);
 
-  this.media.on('status', onstatus);
+  this.castdeck.on('status', onstatus);
 
   var self = this;
 
