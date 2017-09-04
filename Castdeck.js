@@ -25,28 +25,16 @@ Castdeck.APP_ID = '4EC978AD';
 
 util.inherits(Castdeck, Application);
 
-Castdeck.prototype.getStatus = function(callback) {
-  this.media.getStatus.apply(this.media, arguments);
-};
+// Castdeck.prototype.getStatus = function(callback) {
+//   this.media.getStatus.apply(this.media, arguments);
+// };
 
-Castdeck.prototype.load = function(videoId) {
+Castdeck.prototype.load = function(url) {
   this.castdeck.load.apply(this.castdeck, arguments);
 };
 
-Castdeck.prototype.play = function(callback) {
-  this.media.play.apply(this.media, arguments);
-};
-
-Castdeck.prototype.pause = function(callback) {
-  this.media.pause.apply(this.media, arguments);
-};
-
-Castdeck.prototype.stop = function(callback) {
-  this.media.stop.apply(this.media, arguments);
-};
-
-Castdeck.prototype.seek = function(currentTime, callback) {
-  this.media.seek.apply(this.media, arguments);
+Castdeck.prototype.setUrl = function(url) {
+  this.castdeck.setUrl.apply(this.castdeck, arguments);
 };
 
 module.exports = Castdeck;
