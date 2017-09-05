@@ -29,11 +29,7 @@ util.inherits(Castdeck, Application);
 //   this.media.getStatus.apply(this.media, arguments);
 // };
 
-Castdeck.prototype.load = function(url) {
-  this.castdeck.load.apply(this.castdeck, arguments);
-};
-
-Castdeck.prototype.setUrl = function(url) {
+Castdeck.prototype.setUrl = function(url, callback) {
   this.castdeck.setUrl.apply(this.castdeck, arguments);
 };
 
